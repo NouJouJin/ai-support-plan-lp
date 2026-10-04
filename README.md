@@ -1,9 +1,9 @@
 # 農家のためのAI伴走支援 LP ― 仕様書
 
 最終更新：2026-10-04
-状態：LP制作・表示検証済み／GitHub Pagesの配信構成を設定／相談フォーム（Airtable）の埋め込みURL設定済み
+状態：LP制作・表示検証済み／GitHub Pagesの独自ドメインを設定／相談フォーム（Airtable）の埋め込みURL設定済み
 
-GitHub Pages公開先：`https://noujoujin.github.io/ai-support-plan-lp/`。`main` ブランチのルートを配信し、`.nojekyll` で静的ファイルをそのまま公開します。公開結果はGitHubのPagesビルドと実URLで確認します。独自ドメインはまだ設定していません。
+公開先：`https://ai-support.metagri-labo.com/`。`main` ブランチのルートを配信し、`.nojekyll` で静的ファイルをそのまま公開します。公開結果はGitHubのPagesビルドと実URLで確認します。CloudflareのCNAME（ai-support → noujoujin.github.io、DNS only、TTL Auto）とGitHub Pagesの独自ドメインを設定しました。
 
 ---
 
@@ -15,8 +15,8 @@ GitHub Pages公開先：`https://noujoujin.github.io/ai-support-plan-lp/`。`mai
 | 想定読者 | AIに関心はあるが、自分の農園で何から始めればよいか分からない農家・農業法人 |
 | ゴール（CV） | 相談登録フォームの送信（登録時点では契約にならない） |
 | 運営・契約主体 | 株式会社農情人（関連：Metagri研究所／農業AI通信） |
-| Pages公開先 | `https://noujoujin.github.io/ai-support-plan-lp/` |
-| 独自ドメイン候補 | `ai-support.metagri-labo.com`（DNS・Pagesへの設定は未実施） |
+| Pages公開先 | `https://ai-support.metagri-labo.com/` |
+| 独自ドメイン | `ai-support.metagri-labo.com`（Cloudflare・Pages設定済み） |
 | 料金表記 | 月5万円〜（内容・頻度に応じて個別見積もり）。税込／税別などは未確定 |
 | 構成 | 静的HTML＋CSS＋JS。ビルド不要、外部フォント・CDN・トラッキングなし |
 
@@ -166,7 +166,7 @@ Airtable接続後は、回帰確認のフォーム通信をモックしていま
 2. **掲載許諾**：kamokobuさん・ひろしま農園さん・川上牧場・吉田さんに、有償サービスのLPに写真と取り組みを載せてよいかを確認する（取材記事への掲載許諾とは別）。
 3. **フォーム**：専用Airtableの埋め込みURLは設定済み。受付後の通知・返信、個人情報の取扱い・同意文、プライバシーポリシーと会社情報へのリンクを確認します。
 4. **運用**：返信担当・返信の目安、契約期間・解約条件。
-5. **公開設定**：`ai-support.metagri-labo.com` のDNS・HTTPS。確定後に canonical と OG（共有時の画像・説明）を追加する。
+5. **共有時の画像**：独自ドメイン・canonical・OGのタイトルと説明は設定済み。専用のOG画像は未制作。
 
 ## 11. 変更履歴とバックアップ
 
