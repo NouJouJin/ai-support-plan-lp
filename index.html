@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="農家の記録・数字・発信・手順づくりを、AIで一緒に試す伴走支援。月5万円〜を目安に、農園の課題に合わせて支援方法をご提案します。">
+  <meta name="theme-color" content="#1F3A29">
+  <title>農家のためのAI伴走支援｜株式会社農情人・Metagri研究所</title>
+  <link rel="icon" type="image/jpeg" href="assets/metagri-official.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- アイコン（同じ線幅・同じ角で統一。外部読み込みなし） -->
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5m-6 6 6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-question" viewBox="0 0 24 24"><path d="M9.2 9.2a2.9 2.9 0 1 1 4.2 2.6c-.9.5-1.4 1.1-1.4 2.1v.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="17.6" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 19h14M7.5 16v-4m4.5 4V8.5m4.5 7.5V5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="m14.5 5.5 4 4M5 19l1-4.5L15.8 4.7a1.5 1.5 0 0 1 2.1 0l1.4 1.4a1.5 1.5 0 0 1 0 2.1L9.5 18 5 19Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 20v-7m0 0c0-4 2.6-6.5 7-6.5 0 4.2-2.8 6.5-7 6.5Zm0 0C12 9.6 9.8 7.5 5.5 7.5c0 3.6 2.4 5.5 6.5 5.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+</svg>
+
+<a class="skip" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand official-brand" href="#top" aria-label="AI伴走支援 トップへ"><img src="assets/metagri-logo-horizontal.jpg" width="1437" height="382" alt="Metagri研究所"><span class="brand-sub">農家のための<br class="sp-only">AI伴走支援</span></a>
+    <nav aria-label="メインナビゲーション"><a href="#support">支援内容</a><a href="#stories">実践の例</a><a href="#price">料金</a><a href="#faq">よくある質問</a></nav>
+    <a class="header-cta" href="#consultation">相談窓口<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow eyebrow-plain"><span class="seed-dot"></span>農業の現場から、AIをはじめよう。</p>
+        <h1 id="hero-title"><span class="nw">AI、何から始める？</span><br><span class="nw mark">を一緒に決める。</span></h1>
+        <p class="hero-lead"><span class="nw">あなたの農園の「困った」に、</span><span class="nw">一緒に考え、試すパートナーを。</span></p>
+        <p class="hero-description">記録も、数字も、発信も。<br>日々の仕事から、AIで試せることを見つけて、<br class="desktop-break">現場で使える形にしていきます。</p>
+        <div class="hero-actions">
+          <a class="button" href="#consultation">相談内容を登録する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="button-ghost" href="#support">支援内容を見る<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+        </div>
+        <p class="hero-note">登録内容を確認・審査してご案内します。登録時点では契約になりません。</p>
+      </div>
+      <div class="hero-art">
+        <div class="hero-photos">
+          <figure class="hp hp-main"><img src="assets/field/hero-hiroshima-tomato.jpg" width="900" height="1200" alt="ひろしま農園のトマトハウスの通路"><figcaption>ひろしま農園｜トマト</figcaption></figure>
+          <figure class="hp"><img src="assets/field/hero-kawakami-barn.jpg" width="900" height="675" alt="川上牧場の牛舎に取り付けた見守り用カメラ"><figcaption>川上牧場｜酪農</figcaption></figure>
+          <figure class="hp"><img src="assets/field/hero-yoshida-hens.jpg" width="900" height="675" alt="吉田さんの平飼い鶏舎の鶏"><figcaption>吉田さん｜養鶏</figcaption></figure>
+        </div>
+        <p class="art-caption">農業AI通信で取材してきた現場から</p>
+        <div class="floating-note note-one"><span class="note-icon" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span><div><small>小さく試して</small><strong>現場で使える形へ。</strong></div></div>
+        <div class="floating-note note-two"><span class="note-icon note-icon-warm" aria-hidden="true"><svg class="icon"><use href="#i-sprout"/></svg></span><div><small>ひとりで悩まず</small><strong>一緒に、次の一歩を。</strong></div></div>
+      </div>
+    </div>
+    <div class="container">
+      <dl class="hero-facts">
+        <div class="fact fact-price"><dt>月額伴走の目安</dt><dd><strong>月5万円〜</strong><small>内容・頻度に応じて個別にお見積もり</small></dd></div>
+        <div class="fact"><dt>進め方</dt><dd><strong>オンライン中心</strong><small>対面のご希望は相談内容にご記入ください</small></dd></div>
+        <div class="fact"><dt>はじめに</dt><dd><strong>30分程度の面談</strong><small>対応可能な場合に、オンラインで実施</small></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="brand-family" aria-label="運営会社と関連する活動">
+    <div class="container brand-family-grid">
+      <div class="brand-family-item"><span>運営・契約主体</span><img class="company-logo" src="assets/noujoujin-official.png" width="586" height="590" alt="農情人"></div>
+      <div class="brand-family-item"><span>関連コミュニティ</span><img class="community-logo" src="assets/metagri-logo-horizontal.jpg" width="1437" height="382" alt="Metagri研究所"></div>
+      <div class="brand-family-item"><span>実践事例の発信</span><img class="media-logo" src="assets/agri-ai-logo.png" width="1235" height="365" alt="農業AI通信"></div>
+    </div>
+  </section>
+
+  <section class="section intro" aria-labelledby="intro-title">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow"><span class="eyebrow-no">01</span>YOUR FIRST STEP</p>
+        <h2 id="intro-title"><span class="nw">こんなところで、</span><br><span class="nw">手が止まっていませんか？</span></h2>
+        <p>AIのことより、まずは仕事のことから。<br>今の困りごとを、一緒に整理しましょう。</p>
+      </div>
+      <div class="concern-grid">
+        <article class="concern"><div class="line-icon" aria-hidden="true"><svg class="icon"><use href="#i-question"/></svg></div><span class="mini-label">はじめの一歩</span><h3>試してみたい。<br>でも、何から？</h3><p>AIに興味はあるけれど、自分の農園でどう使えばいいのか分からない。</p></article>
+        <article class="concern"><div class="line-icon" aria-hidden="true"><svg class="icon"><use href="#i-chart"/></svg></div><span class="mini-label">記録・経営の数字</span><h3>記録はある。<br>判断に使えていない。</h3><p>日報や原価の数字がたまっても、次の一手につながらない。</p></article>
+        <article class="concern"><div class="line-icon" aria-hidden="true"><svg class="icon"><use href="#i-pen"/></svg></div><span class="mini-label">発信・仕事の引き継ぎ</span><h3>伝えたい。<br>言葉にするのが難しい。</h3><p>商品の魅力も、経験や作業のコツも。伝わる形にまとめたい。</p></article>
+      </div>
+      <p class="intro-footer"><img src="assets/sprout.svg" width="28" height="28" alt=""><span><span class="nw">相談したいことが、</span><span class="nw">まだはっきりしていなくても</span><span class="nw">大丈夫です。</span></span></p>
+    </div>
+  </section>
+
+  <section class="section support-section" id="support" aria-labelledby="support-title">
+    <div class="container support-layout">
+      <div class="support-heading">
+        <p class="eyebrow"><span class="eyebrow-no">02</span>WHAT WE DO</p>
+        <h2 id="support-title"><span class="nw">農園の仕事に、</span><br><span class="nw"><em>ちょうどいい</em></span><span class="nw">AIの使い方を。</span></h2>
+        <p>答えを渡して終わりではなく、<br>一緒に試して、振り返って、整える。<br>農園に合った使い方を育てます。</p>
+        <ol class="support-cycle" aria-label="支援の進め方"><li>整理する</li><li>試す</li><li>見直す</li></ol>
+      </div>
+      <div class="support-list">
+        <article class="support-item"><span class="service-number">01</span><div><p class="mini-label">記録・数字</p><h3>数字を、次の判断の材料に。</h3><p>日報や表計算のデータから「何を知りたいか」を整理。AIに渡す情報や聞き方を一緒に考えます。</p><div class="tags"><span>日報の整理</span><span>原価・経営の問い</span></div></div></article>
+        <article class="support-item"><span class="service-number">02</span><div><p class="mini-label">発信・手順づくり</p><h3>農園の魅力と経験を、言葉に。</h3><p>商品説明、農園の発信、作業の手順書。今ある情報や経験をもとに、伝わる形を一緒に作ります。</p><div class="tags"><span>商品説明・発信</span><span>作業の手順化</span></div></div></article>
+        <article class="support-item"><span class="service-number">03</span><div><p class="mini-label">現場データ</p><h3>日々の記録を、使える情報に。</h3><p>温湿度などの記録を、毎日の確認に役立てる方法を検討。機器やシステムが必要な場合は、範囲と費用から整理します。</p><div class="tags"><span>温湿度の記録</span><span>センサーの活用相談</span></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stories-section" id="stories" aria-labelledby="stories-title">
+    <div class="container">
+      <div class="heading-row">
+        <div><p class="eyebrow"><span class="eyebrow-no">03</span>FIELD STORIES</p><h2 id="stories-title"><span class="nw">現場から見えてきた、</span><br><span class="nw">AIとの付き合い方。</span></h2></div>
+        <p>農業AI通信で紹介してきた取り組み。<br>農園の課題によって、使い方も変わります。</p>
+      </div>
+      <div class="story-grid">
+        <article class="story-card">
+          <div class="story-visual visual-business" aria-hidden="true"><span class="visual-index">FIELD NOTE / 01</span><div class="business-sheet"><div class="sheet-top"><span>記録を整理する</span><i></i></div><div class="sheet-chart"><b></b><b></b><b></b><b></b><b></b></div><div class="sheet-lines"><i></i><i></i></div></div><div class="visual-caption">見える化から、<br><strong>問いを考えるへ。</strong></div><span class="visual-label">経営・数字</span></div>
+          <div class="story-body"><p class="story-badges"><span class="badge-amb">農業AI通信 メディアアンバサダー</span><span class="badge-role">AIの役割：参謀</span></p><p class="mini-label">kamokobuさん / 農業法人での実践</p><h3>数字を「見る」から、<br>経営の問いを考えるへ。</h3><p>品種別原価や作業日報の見える化を出発点に、AIを経営判断の相談相手に。対話を通じて、何を知りたいのかを言葉にしていきました。</p><p class="story-takeaway"><span>伴走の視点</span><b>まず、目的を言葉にする。</b></p><a class="text-arrow story-link" href="https://metagri-labo.com/ai-guide/ambassador-kamokobu-vol1/" target="_blank" rel="noopener noreferrer" aria-label="kamokobuさんの記事「挫折と転換 ― 農家がAIと経営コックピットを作るまで」を読む（農業AI通信・新しいタブで開きます）">農業AI通信の記事を読む<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="story-card">
+          <div class="story-visual visual-photo"><img src="assets/hiroshima-farm-portrait.jpg" width="1618" height="1012" alt="ひろしま農園の事例資料にある、トマトのハウス内で撮影された写真"><span class="visual-index visual-index-light">FIELD NOTE / 02</span><span class="photo-label">ひろしま農園 / 現場の一枚</span></div>
+          <div class="story-body"><p class="story-badges"><span class="badge-amb">農業AI通信 メディアアンバサダー</span><span class="badge-role">AIの役割：鏡</span></p><p class="mini-label">ひろしま農園さん / 温湿度・積算温度</p><h3>温湿度の記録を、<br>毎日の確認に使う。</h3><p>市販センサーとスプレッドシートで、現場のデータを記録する仕組みづくり。数字を確認しながら、AIにも相談して使い方を広げていく実践です。</p><p class="story-takeaway"><span>伴走の視点</span><b>現場で確かめながら使う。</b></p><a class="text-arrow story-link" href="https://metagri-labo.com/ai-guide/hiroshima-tomato-vol4/" target="_blank" rel="noopener noreferrer" aria-label="ひろしま農園さんの記事「スプレッドシートに刻まれた最初のデータ」を読む（農業AI通信・新しいタブで開きます）">農業AI通信の記事を読む<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+      </div>
+      <div class="cases">
+        <div class="cases-head"><p class="mini-label">伴走支援の事例</p><h3>ほかにも、こんな現場で。</h3></div>
+        <div class="case-grid case-grid-2">
+          <article class="case-card"><div class="case-photo"><img src="assets/field/case-kawakami-night.jpg" width="800" height="600" alt="川上牧場の見守りカメラが夜間に映した牛舎" loading="lazy"><span class="case-role">目</span></div><div class="case-body"><p class="case-name">川上牧場<span>酪農</span></p><p>市販カメラとAI、Discordを組み合わせ、夜の牛舎の見守りを通知で回す。</p><a class="text-arrow story-link" href="https://metagri-labo.com/ai-guide/kawakami-farm-monitoring-vol1/" target="_blank" rel="noopener noreferrer" aria-label="川上牧場の記事「市販カメラ×AIで小さく試す。牛舎AI見守りシステム実装」を読む（農業AI通信・新しいタブで開きます）">農業AI通信の記事を読む<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+          <article class="case-card"><div class="case-photo"><img src="assets/field/case-yoshida-gelato.jpg" width="800" height="600" alt="卵と全卵ジェラート" loading="lazy"><span class="case-role">相棒</span></div><div class="case-body"><p class="case-name">吉田さん<span>養鶏・愛媛</span></p><p>平飼い卵の「全卵ジェラート」を、生成AIとの壁打ちから商品化へ。</p><a class="text-arrow story-link" href="https://metagri-labo.com/ai-guide/hirosuke-ai-interview-vol1/" target="_blank" rel="noopener noreferrer" aria-label="吉田さんの記事「なぜ全卵ジェラートは存在しないのか？」を読む（農業AI通信・新しいタブで開きます）">農業AI通信の記事を読む<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+        </div>
+      </div>
+      <aside class="book-card" aria-label="取材をまとめた書籍">
+        <img src="assets/field/book-cover.jpg" width="480" height="720" alt="書籍『なぜ、あの農家はAIを使いこなせるのか』の表紙" loading="lazy">
+        <div class="book-body">
+          <p class="mini-label">取材をまとめた一冊</p>
+          <h3>なぜ、あの農家はAIを<br class="sp-only">使いこなせるのか</h3>
+          <p>酪農・施設園芸・稲作・養鶏・兼業農業。5つの現場を取材したルポです。AIは農家ごとに「目」「鏡」「参謀」「相棒」「工具箱」と役割を変えていました。</p>
+          <p class="book-meta">Kindle／2026年7月発売／農情人出版</p>
+          <a class="text-arrow" href="https://amzn.to/4yhJTSN" target="_blank" rel="noopener noreferrer">Amazonで見る<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </aside>
+      <p class="section-footnote">これまでの取り組みの紹介です。支援内容や到達点は、農園ごとに異なります。経営・数字の図はイメージです。写真は各農園の取材・事例資料のもので、AIの役割（目・鏡・参謀・相棒）は書籍での整理に基づきます。</p>
+    </div>
+  </section>
+
+  <section class="section process-section" id="process" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow"><span class="eyebrow-no">04</span>HOW IT WORKS</p>
+        <h2 id="process-title"><span class="nw">相談から、</span><span class="nw">農園に合う一歩へ。</span></h2>
+        <p>まずは状況をお聞きして、支援の進め方を考えます。</p>
+      </div>
+      <ol class="steps">
+        <li><span class="step-no">01</span><h3>相談内容を登録</h3><p>目的・AIの利用状況・予算感をフォームでお知らせください。</p></li>
+        <li><span class="step-no">02</span><h3>確認・審査</h3><p>内容と対応体制を確認し、支援の可否や次の進め方をご連絡します。</p></li>
+        <li><span class="step-no">03</span><h3>面談で課題を整理</h3><p>対応可能な場合は、30分程度のオンライン面談で希望を伺います。</p></li>
+        <li><span class="step-no">04</span><h3>ご提案・支援開始</h3><p>支援内容と費用をご提案。合意し、契約してからスタートします。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section price-section" id="price" aria-labelledby="price-title">
+    <div class="container price-layout">
+      <div class="price-heading">
+        <p class="eyebrow"><span class="eyebrow-no">05</span>SUPPORT PLAN</p>
+        <h2 id="price-title"><span class="nw">小さく始めて、</span><br><span class="nw">農園に合う形へ。</span></h2>
+        <p class="price-description">オンラインでの対話を中心に、<br>今の仕事と予算に合わせてご提案します。</p>
+      </div>
+      <div class="price-card">
+        <div class="price-card-top"><span>伴走型AI活用支援</span><span class="price-badge">料金の目安</span></div>
+        <p class="price-value"><span>月</span><strong>5</strong><span>万円〜</span></p>
+        <p class="price-caption">内容・頻度に応じて、個別にお見積もり</p>
+        <ul class="price-details">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>農園の課題・優先テーマを整理</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>AIの使い方を一緒に試し、見直す</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>農園に合わせた頼み方・手順を整える</li>
+        </ul>
+        <p class="price-small">面談頻度や支援範囲、ツール・機器等の費用は、個別のご提案でご案内します。予算が未定の場合も、その旨をお知らせください。</p>
+        <a class="button button-block" href="#consultation">今の状況を相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section" aria-labelledby="about-title">
+    <div class="container about-layout">
+      <div class="about-mark official-about"><img src="assets/metagri-official.jpg" width="525" height="536" alt="Metagri研究所 公式ロゴ"><span>FARM × AI × PEOPLE</span><p>農業の現場に、<br>新しい選択肢を。</p></div>
+      <div class="about-copy">
+        <p class="eyebrow"><span class="eyebrow-no">06</span>OUR TEAM</p>
+        <h2 id="about-title"><span class="nw">株式会社農情人が、</span><br><span class="nw">責任を持って対応します。</span></h2>
+        <p>農業分野でのAI活用支援と、実践事例の発信に取り組む株式会社農情人が、窓口・契約主体となります。</p>
+        <p>農業コミュニティ「Metagri研究所」や「農業AI通信」での実践をもとに、農園の仕事に合うAIの使い方を考えます。</p>
+        <dl class="company-details"><div><dt>運営・契約主体</dt><dd>株式会社農情人</dd></div><div><dt>代表取締役</dt><dd>甲斐 雄一郎</dd></div><div><dt>研修・講演</dt><dd>新任普及指導センター所長向け研修など</dd></div></dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+    <div class="container faq-layout">
+      <div class="faq-heading"><p class="eyebrow"><span class="eyebrow-no">07</span>QUESTIONS</p><h2 id="faq-title">よくあるご質問</h2><p>はじめる前の気になること。</p></div>
+      <div class="faq-list">
+        <details open><summary><span class="q">Q</span><span class="q-text">AIを使ったことがなくても相談できますか？</span><span class="toggle" aria-hidden="true"></span></summary><p>はい。フォームの利用状況で「使ったことがない」をお選びください。ご経験や相談内容に応じた進め方をご案内します。</p></details>
+        <details><summary><span class="q">Q</span><span class="q-text">対面での相談はできますか？</span><span class="toggle" aria-hidden="true"></span></summary><p>オンラインを中心とした支援を想定しています。対面をご希望の場合は相談内容にご記入ください。地域や内容を確認してご案内します。</p></details>
+        <details><summary><span class="q">Q</span><span class="q-text">登録すると、契約になりますか？</span><span class="toggle" aria-hidden="true"></span></summary><p>登録時点では契約になりません。内容を確認・審査し、支援内容と費用に合意してから契約します。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="consultation-section" id="consultation" aria-labelledby="consultation-title">
+    <div class="container consultation-layout">
+      <div class="consultation-copy">
+        <p class="eyebrow">LET’S TAKE THE FIRST STEP</p>
+        <h2 id="consultation-title"><span class="nw">まずは、今の</span><br><span class="nw">「困った」から。</span></h2>
+        <p>目的がまとまっていなくても大丈夫。<br>今の状況と予算感をお聞かせください。</p>
+        <ol class="next-list" aria-label="登録後の流れ">
+          <li><b>01</b>相談内容を登録</li>
+          <li><b>02</b>確認・審査のうえご連絡</li>
+          <li><b>03</b>30分程度のオンライン面談</li>
+        </ol>
+        <p class="consultation-note">内容を確認・審査し、支援の可否と次の進め方をご案内します。</p>
+      </div>
+      <!-- AIRTABLE SLOT: config.js の2つのURLを設定すると、ダミーからiframeへ切り替わります。 -->
+      <div class="form-shell" id="airtable-slot"><div class="dummy-form" id="dummy-form"><div class="form-heading"><span class="mini-label">相談登録フォーム</span><span class="dummy-badge">準備中</span></div><h3>農園のこと、お聞かせください。</h3><p class="dummy-explanation">フォームは現在準備中です。<br>この表示から個人情報の入力・送信はできません。</p><div class="dummy-fields" aria-hidden="true"><div class="dummy-row"><div><span>お名前</span><div class="dummy-input">例：農業 太郎</div></div><div><span>農園・法人名</span><div class="dummy-input">例：〇〇農園</div></div></div><div><span>メールアドレス</span><div class="dummy-input">連絡先のメールアドレス</div></div><div><span>相談したいこと</span><div class="dummy-options"><span>記録・日報</span><span>数字・原価</span><span>販売・発信</span><span>まだ決まっていない</span></div></div><div><span>AIの利用状況・予算感</span><div class="dummy-input">今の状況に合う選択肢を選びます <b>⌄</b></div></div></div><button class="button dummy-button" type="button" disabled>フォーム公開までお待ちください</button><p class="form-note">登録時点では契約になりません。</p></div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-main">
+    <a class="brand official-brand" href="#top"><img src="assets/metagri-logo-horizontal.jpg" width="1437" height="382" alt="Metagri研究所"><span class="brand-sub">農家のためのAI伴走支援</span></a>
+    <p>運営・契約主体：株式会社農情人</p>
+    <a href="#top" class="back-top">ページの先頭へ<svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a>
+  </div>
+  <div class="container footer-bottom"><span>農業の現場から、AIと一緒に次の一歩を。</span><small>© 2026 株式会社農情人</small></div>
+</footer>
+
+<!-- スマートフォンの追従ボタン（JavaScriptが無効なら表示しません） -->
+<div class="mobile-cta" id="mobile-cta" aria-hidden="true"><a class="button" href="#consultation" tabindex="-1">相談内容を登録する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+
+<script src="config.js"></script><script src="script.js"></script>
+</body>
+</html>
