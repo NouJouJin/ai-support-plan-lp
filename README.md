@@ -1,7 +1,9 @@
 # 農家のためのAI伴走支援 LP ― 仕様書
 
 最終更新：2026-10-04
-状態：ローカル制作済み・表示検証済み／**外部公開は未実施**／相談フォーム（Airtable）の埋め込みURL設定済み
+状態：LP制作・表示検証済み／GitHub Pagesの配信構成を設定／相談フォーム（Airtable）の埋め込みURL設定済み
+
+GitHub Pages公開先：`https://noujoujin.github.io/ai-support-plan-lp/`。`main` ブランチのルートを配信し、`.nojekyll` で静的ファイルをそのまま公開します。公開結果はGitHubのPagesビルドと実URLで確認します。独自ドメインはまだ設定していません。
 
 ---
 
@@ -13,7 +15,8 @@
 | 想定読者 | AIに関心はあるが、自分の農園で何から始めればよいか分からない農家・農業法人 |
 | ゴール（CV） | 相談登録フォームの送信（登録時点では契約にならない） |
 | 運営・契約主体 | 株式会社農情人（関連：Metagri研究所／農業AI通信） |
-| 公開先（予定） | `ai-support.metagri-labo.com`（DNS・HTTPSは未設定） |
+| Pages公開先 | `https://noujoujin.github.io/ai-support-plan-lp/` |
+| 独自ドメイン候補 | `ai-support.metagri-labo.com`（DNS・Pagesへの設定は未実施） |
 | 料金表記 | 月5万円〜（内容・頻度に応じて個別見積もり）。税込／税別などは未確定 |
 | 構成 | 静的HTML＋CSS＋JS。ビルド不要、外部フォント・CDN・トラッキングなし |
 
