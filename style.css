@@ -616,3 +616,29 @@ mark.tbd{background:#FFF1A8;color:inherit;outline:1px dashed var(--orange);outli
 /* 2026-10-24 サービス名「農家のAI経営参謀づくり支援」で名称が長くなったため：相談ボタンを折り返さない／760px以下は「農家の」を省く（ヒーロー上部に正式名称あり） */
 .header-cta{white-space:nowrap;flex-shrink:0}
 @media (max-width:760px){.official-brand .brand-sub .brand-sub-lead{display:none}}
+
+/* 月次契約と販売規約（2026-10-24） */
+.inline-link,.voice-source a,.legal-main a:not(.button){text-decoration:underline;text-underline-offset:3px}
+.story-voice{margin:20px 0;padding:18px 20px;background:var(--green-soft);border-left:3px solid var(--green);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:15px;line-height:1.9}
+.story-voice span{display:block;margin-top:8px;font-size:12px;color:var(--muted)}
+.voice-source{margin-top:24px;color:var(--muted);font-size:13px;line-height:1.9}
+.footer-legal{display:flex;flex-wrap:wrap;gap:12px 24px;padding-top:24px;font-size:13px}
+.footer-legal a{text-decoration:underline;text-underline-offset:3px}
+.legal-main{max-width:920px;padding-top:64px;padding-bottom:64px}
+.legal-main h1{margin:12px 0 16px;font:600 clamp(25px,4vw,38px)/1.6 var(--serif)}
+.legal-date{color:var(--muted);font-size:13px;margin-bottom:24px}
+.legal-notice{background:var(--warm);border:1px solid var(--line-green);padding:20px 24px;border-radius:var(--radius);margin-bottom:28px;font-size:14px}
+.legal-notice strong{display:block;margin-bottom:4px}
+.legal-toc{display:flex;flex-wrap:wrap;gap:12px 24px;padding:24px 0;border-bottom:1px solid var(--line);margin:16px 0 32px;font-size:14px}
+.legal-main section{margin-top:40px}
+.legal-main h2{font-size:23px;margin-bottom:16px;line-height:1.6}
+.legal-main h3{font-size:18px;margin:24px 0 12px}
+.legal-main section p+p{margin-top:14px}
+.legal-main ul,.legal-main ol{padding-left:1.6em;margin:16px 0}
+.legal-main ul{list-style:disc}.legal-main ol{list-style:decimal}
+.legal-main li{padding-left:4px;margin-bottom:12px;overflow-wrap:anywhere}
+.legal-contact{margin-top:20px}
+.legal-contact>div{display:grid;grid-template-columns:150px 1fr;gap:12px;border-bottom:1px solid var(--line);padding:12px 0}
+.legal-contact dt{font-weight:600}.legal-contact dd{overflow-wrap:anywhere}
+.legal-back{margin-top:48px}
+@media(max-width:760px){.legal-main{padding-top:36px;padding-bottom:40px}.legal-main h2{font-size:20px}.legal-main li{font-size:14px}.legal-contact>div{grid-template-columns:1fr;gap:4px}.legal-notice{padding:16px}.story-voice{padding:14px 16px;font-size:14px}}
