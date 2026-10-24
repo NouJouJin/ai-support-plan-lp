@@ -16,7 +16,7 @@
   if (!slot) return;
   const frame = document.createElement("iframe");
   frame.className = "airtable-frame";
-  frame.title = "農家のAI経営参謀づくり支援 相談登録フォーム";
+  frame.title = "農家のAI右腕づくり支援 相談登録フォーム";
   frame.src = embedUrl;
   frame.height = "533";
   frame.loading = "lazy";
