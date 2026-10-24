@@ -589,3 +589,30 @@ details[open] .toggle::after{transform:translate(-50%,-50%) rotate(0)}
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important}
 }
+
+/* ---------- 2026-10-23 経営参謀版で追加 ---------- */
+.support-note{margin-top:4px;padding:18px 22px;border:1px dashed var(--line-green);border-radius:var(--radius);font-size:14px;color:var(--muted);line-height:1.9;word-break:auto-phrase}
+.support-note b{display:block;font-size:12px;letter-spacing:.06em;color:var(--green-dark);margin-bottom:4px}
+.program-section{background:#fff}
+.program-note{max-width:720px;margin:44px auto 0;text-align:center;font-size:14px;color:var(--muted);line-height:1.9;word-break:auto-phrase}
+.terms-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.terms-card{padding:32px 36px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow)}
+.terms-card h3{font-size:20px;margin-bottom:16px}
+.terms-card ul{display:grid;gap:10px}
+.terms-card li{position:relative;padding-left:22px;font-size:15px;line-height:1.85;color:var(--ink)}
+.terms-card li::before{content:"";position:absolute;left:4px;top:.75em;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.terms-card-out li::before{background:var(--faint)}
+.terms-card p{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.85}
+@media (max-width:760px){
+  .terms-grid{grid-template-columns:1fr;gap:14px}
+  .terms-card{padding:24px 20px}
+  .terms-card li{font-size:14px}
+  .program-note{margin-top:20px;text-align:left}
+}
+/* 下書き専用：公開前に .draft-banner の要素と <mark class="tbd"> を外す */
+mark.tbd{background:#FFF1A8;color:inherit;outline:1px dashed var(--orange);outline-offset:1px;border-radius:2px;padding:0 2px}
+.draft-banner{position:fixed;left:12px;top:calc(var(--header-h) + 8px);z-index:200;max-width:calc(100% - 24px);padding:8px 14px;border-radius:8px;background:#FFF1A8;border:1px solid var(--orange);font-size:12px;font-weight:600;color:var(--ink);box-shadow:var(--shadow)}
+
+/* 2026-10-24 サービス名「農家のAI経営参謀づくり支援」で名称が長くなったため：相談ボタンを折り返さない／760px以下は「農家の」を省く（ヒーロー上部に正式名称あり） */
+.header-cta{white-space:nowrap;flex-shrink:0}
+@media (max-width:760px){.official-brand .brand-sub .brand-sub-lead{display:none}}
