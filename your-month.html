@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="農家のAI右腕づくり支援「あなたの場合の1か月」。POP、作業マニュアル、声で残す記録、経営の数字など、農園の困りごとから選んで、最初の1か月で何をするか・何が手元に残るかを確かめられます。">
+  <meta name="theme-color" content="#1F3A29">
+  <title>あなたの場合の1か月｜農家のAI右腕づくり支援</title>
+  <link rel="canonical" href="https://ai-support.metagri-labo.com/your-month.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://ai-support.metagri-labo.com/your-month.html">
+  <meta property="og:title" content="あなたの場合の1か月｜農家のAI右腕づくり支援">
+  <meta property="og:description" content="農家のAI右腕づくり支援「あなたの場合の1か月」。POP、作業マニュアル、声で残す記録、経営の数字など、農園の困りごとから選んで、最初の1か月で何をするか・何が手元に残るかを確かめられます。">
+  <link rel="icon" type="image/jpeg" href="assets/metagri-official.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="your-month.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="ym-page">
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5m-6 6 6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 19h14M7.5 16v-4m4.5 4V8.5m4.5 7.5V5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="m14.5 5.5 4 4M5 19l1-4.5L15.8 4.7a1.5 1.5 0 0 1 2.1 0l1.4 1.4a1.5 1.5 0 0 1 0 2.1L9.5 18 5 19Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 20v-7m0 0c0-4 2.6-6.5 7-6.5 0 4.2-2.8 6.5-7 6.5Zm0 0C12 9.6 9.8 7.5 5.5 7.5c0 3.6 2.4 5.5 6.5 5.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M4 5h2.2l1.9 9.2h9.3L19.5 8H7.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.3" cy="18" r="1.3" fill="currentColor"/><circle cx="16.3" cy="18" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m15 15 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10A.5.5 0 0 1 7 20V3.5Zm7 0v4h4M10 12h5m-5 3.5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3.5" width="6" height="10.5" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M10 13.6V5.5a2 2 0 0 1 4 0v8.1a4 4 0 1 1-4 0Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 9v7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-14 14Zm0 0 8-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M4 12h1.5M8 8v8m3.5-11v14M15 9v6m3.5-4.5v3M21 12h-.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m9 8 3 4 3-4m-3 4v4.5M9.3 12.5h5.4M9.3 15h5.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 19c.4-3.2 2.6-5 5.5-5s5.1 1.8 5.5 5M15.5 5.8a3 3 0 0 1 0 5.4M17.5 14.4c1.7.7 2.8 2.3 3 4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 5.5 6v5.5c0 4.2 2.7 7.4 6.5 9 3.8-1.6 6.5-4.8 6.5-9V6L12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2.2 2.2L15 10.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M4 18.5 9.5 12l3.5 3 6.5-8M15 7h4.5v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.5v2.3m0 12.4v2.3M3.5 12h2.3m12.4 0h2.3M6 6l1.6 1.6m8.8 8.8L18 18M18 6l-1.6 1.6M7.6 16.4 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand official-brand" href="index.html" aria-label="農家のAI右腕づくり支援 トップへ"><img src="assets/metagri-logo-horizontal.jpg" width="1437" height="382" alt="Metagri研究所"><span class="brand-sub"><span class="brand-sub-lead">農家の</span>AI右腕<br class="sp-only">づくり支援</span></a>
+    <nav aria-label="メインナビゲーション"><a href="#choose">困りごとから選ぶ</a><a href="#month">1か月の基本</a><a href="#scope">表示の見方</a><a href="index.html#price">料金</a></nav>
+    <a class="header-cta" href="index.html#consultation">相談窓口<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="ym-hero" id="top" aria-labelledby="ym-title">
+    <div class="container ym-hero-inner">
+      <p class="eyebrow eyebrow-plain"><span class="seed-dot"></span>農家のAI右腕づくり支援｜あなたの場合の1か月</p>
+      <h1 id="ym-title"><span class="nw">あなたの農園なら、</span><br><span class="nw mark">最初の1か月で何をする？</span></h1>
+      <p class="ym-hero-lead"><span class="nw">困りごとを1つ選ぶと、</span><span class="nw">1か月の進め方と、</span><span class="nw">手元に残るものが分かります。</span></p>
+      <p class="ym-hero-text">ここに載せたのは、当社がこれまでの伴走や自社の仕事で実際にやってきたことです。<br class="desktop-break">やっていないことは「調査・選定まで」と書き分けています。</p>
+      <div class="hero-actions">
+        <a class="button" href="#choose">困りごとから選ぶ<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+        <a class="button-ghost" href="index.html">サービスの概要を見る<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <p class="hero-note">1か月の進め方は想定例です。実際の内容は、面談で農園の状況を伺って決めます。</p>
+    </div>
+  </section>
+
+  <section class="section ym-choose" id="choose" aria-labelledby="choose-title">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow"><span class="eyebrow-no">01</span>CHOOSE YOURS</p>
+        <h2 id="choose-title"><span class="nw">近いものを、</span><span class="nw">1つ選んでください。</span></h2>
+        <p>ぴったりでなくても大丈夫です。いちばん近いものから始めます。</p>
+      </div>
+
+      <div class="ym-tabs" role="tablist" aria-label="選び方">
+        <button class="ym-tab is-active" type="button" role="tab" id="tab-worry" aria-controls="pane-worry" aria-selected="true">困りごとから選ぶ</button>
+        <button class="ym-tab" type="button" role="tab" id="tab-case" aria-controls="pane-case" aria-selected="false" tabindex="-1">事例から選ぶ</button>
+      </div>
+
+      <div class="ym-pane" id="pane-worry" role="tabpanel" aria-labelledby="tab-worry">
+        <h3 class="ym-pane-title">困りごとから選ぶ</h3>
+        <div class="ym-chip-groups">
+          <div class="ym-chip-group"><p class="mini-label">売る・伝える</p><ul><li><a class="ym-chip" href="#pop" data-theme="pop"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg><span>POP・商品説明</span></a></li><li><a class="ym-chip" href="#ec" data-theme="ec"><svg class="icon" aria-hidden="true"><use href="#i-cart"/></svg><span>ネット直販の立ち上げ</span></a></li><li><a class="ym-chip" href="#shohin" data-theme="shohin"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>加工品・商品開発の下調べ</span></a></li></ul></div>
+          <div class="ym-chip-group"><p class="mini-label">記録・現場</p><ul><li><a class="ym-chip" href="#manual" data-theme="manual"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg><span>作業マニュアル</span></a></li><li><a class="ym-chip" href="#voice" data-theme="voice"><svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg><span>声で残す作業記録</span></a></li><li><a class="ym-chip" href="#temp" data-theme="temp"><svg class="icon" aria-hidden="true"><use href="#i-thermo"/></svg><span>温湿度・積算温度</span></a></li><li><a class="ym-chip" href="#leaf" data-theme="leaf"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><span>葉の不調の切り分け</span></a></li></ul></div>
+          <div class="ym-chip-group"><p class="mini-label">経営・事務</p><ul><li><a class="ym-chip" href="#keiei" data-theme="keiei"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg><span>経営の数字・投資判断</span></a></li><li><a class="ym-chip" href="#office" data-theme="office"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg><span>録音の文字起こしと整理</span></a></li><li><a class="ym-chip" href="#keihi" data-theme="keihi"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><span>確定申告の準備</span></a></li><li><a class="ym-chip" href="#koyo" data-theme="koyo"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg><span>人に任せる準備</span></a></li><li><a class="ym-chip" href="#anzen" data-theme="anzen"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>AIの選び方・安全な設定</span></a></li></ul></div>
+          <div class="ym-chip-group"><p class="mini-label">仕組み・道具</p><ul><li><a class="ym-chip" href="#shikyo" data-theme="shikyo"><svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg><span>市況・価格の自動収集</span></a></li><li><a class="ym-chip" href="#jisaku" data-theme="jisaku"><svg class="icon" aria-hidden="true"><use href="#i-gear"/></svg><span>道具を自作する前の整理</span></a></li></ul></div>
+        </div>
+      </div>
+
+      <div class="ym-pane" id="pane-case" role="tabpanel" aria-labelledby="tab-case">
+        <h3 class="ym-pane-title">事例から選ぶ</h3>
+        <p class="ym-pane-note">農園のお名前は出していません。どんな現場で、何をしたかだけをお伝えします。</p>
+        <div class="ym-cases">
+          <article class="ym-case" id="c-tomato"><p class="ym-case-kind">過去の伴走</p><h3>施設トマトの農園</h3><p class="ym-case-sub">夫婦とスタッフ数名・直売あり</p><p class="ym-case-text">栽培は勘と経験、作業指示は口頭、POPは長年同じ。約90日の伴走で、一つずつ試しました。</p><p class="mini-label">ここから選べること</p><ul class="ym-case-links"><li><a class="ym-chip ym-chip-sm" href="#pop" data-theme="pop">POP・商品説明</a></li><li><a class="ym-chip ym-chip-sm" href="#manual" data-theme="manual">作業マニュアル</a></li><li><a class="ym-chip ym-chip-sm" href="#voice" data-theme="voice">声で残す作業記録</a></li><li><a class="ym-chip ym-chip-sm" href="#temp" data-theme="temp">温湿度・積算温度</a></li><li><a class="ym-chip ym-chip-sm" href="#leaf" data-theme="leaf">葉の不調の切り分け</a></li><li><a class="ym-chip ym-chip-sm" href="#koyo" data-theme="koyo">人に任せる準備</a></li><li><a class="ym-chip ym-chip-sm" href="#anzen" data-theme="anzen">AIの選び方・安全な設定</a></li><li><a class="ym-chip ym-chip-sm" href="#ec" data-theme="ec">ネット直販の立ち上げ</a></li></ul></article>
+          <article class="ym-case" id="c-rice"><p class="ym-case-kind">過去の伴走</p><h3>稲作の農業法人</h3><p class="ym-case-sub">会計と作業日報のデータあり</p><p class="ym-case-text">数字は見える化できていたが、判断に使えていなかった。目的を言葉にするところから始めました。</p><p class="mini-label">ここから選べること</p><ul class="ym-case-links"><li><a class="ym-chip ym-chip-sm" href="#keiei" data-theme="keiei">経営の数字・投資判断</a></li></ul></article>
+          <article class="ym-case" id="c-negi"><p class="ym-case-kind">作って提供</p><h3>ねぎ農家</h3><p class="ym-case-sub">市場価格を毎日確認</p><p class="ym-case-text">市場の市況を毎日見に行く手間を減らしたい。価格を表にためる仕組みを作って提供しました。</p><p class="mini-label">ここから選べること</p><ul class="ym-case-links"><li><a class="ym-chip ym-chip-sm" href="#shikyo" data-theme="shikyo">市況・価格の自動収集</a></li></ul></article>
+          <article class="ym-case" id="c-own"><p class="ym-case-kind">当社で実践</p><h3>当社（農情人）の仕事</h3><p class="ym-case-sub">取材・打ち合わせ・発信</p><p class="ym-case-text">録音の文字起こしと整理、経費整理の教材づくり。自社で続けている方法をそのままお伝えします。</p><p class="mini-label">ここから選べること</p><ul class="ym-case-links"><li><a class="ym-chip ym-chip-sm" href="#office" data-theme="office">録音の文字起こしと整理</a></li><li><a class="ym-chip ym-chip-sm" href="#keihi" data-theme="keihi">確定申告の準備</a></li></ul></article>
+          <article class="ym-case" id="c-field"><p class="ym-case-kind">調査・選定まで</p><h3>取材で見てきた現場</h3><p class="ym-case-sub">当社の支援実績ではありません</p><p class="ym-case-text">商品開発や道具の自作は、農家さん自身が進めた例を取材してきました。調べる・選ぶ所までをお手伝いします。</p><p class="mini-label">ここから選べること</p><ul class="ym-case-links"><li><a class="ym-chip ym-chip-sm" href="#shohin" data-theme="shohin">加工品・商品開発の下調べ</a></li><li><a class="ym-chip ym-chip-sm" href="#jisaku" data-theme="jisaku">道具を自作する前の整理</a></li></ul></article>
+        </div>
+      </div>
+
+      <div class="ym-panels" id="panels" aria-live="polite">
+        <p class="ym-panels-label"><span class="seed-dot"></span>選んだ内容</p>
+        <article class="ym-panel" id="pop" data-panel="pop" aria-labelledby="pop-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-pen"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-done">伴走で実施</span><span class="ym-panel-chip">POP・商品説明</span></p>
+              <h3 id="pop-title">「直売所のPOPを、何年も変えていない。」</h3>
+              <p class="ym-panel-lead">売り場のPOPや商品説明を、農園の言葉で作り直します。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>商品・売り場・お客さんのことを伺い、伝えたいことを整理します。</span></li><li><b>2週目</b><span>AIにコピーとPOPの案を出させ、ご自身で選びます。</span></li><li><b>3週目</b><span>印刷して売り場に置き、反応を見て直します。</span></li><li><b>4週目</b><span>季節や商品が変わっても作れるよう、頼み方を手順に残します。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>POP 1〜2枚</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>キャッチコピーの候補と、選んだ理由</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>次のPOPを作るための依頼文</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>過去の伴走では、長年同じPOPを使い回していた施設トマトの農園が、AIでPOPを自作して店頭に置きました。キャッチコピーは複数のAIに案を出させて見比べ、農園の言葉を1つに絞っています。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>産地や栽培方法などの表示が事実どおりかは、ご自身で確かめていただきます。印刷やデザイン外注の費用は含みません。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：POP・商品説明（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="ec" data-panel="ec" aria-labelledby="ec-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-cart"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-built">作って提供・別見積</span><span class="ym-panel-chip">ネット直販の立ち上げ</span></p>
+              <h3 id="ec-title">「ネットで直接売りたいが、手が止まっている。」</h3>
+              <p class="ym-panel-lead">どのサービスで、何を、いくらで売るか。決めることを順番に整理します。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>売りたい商品・発送の方法・使える時間を伺います。</span></li><li><b>2週目</b><span>ネットショップのサービスを比べ、決めることを一覧にします。</span></li><li><b>3週目</b><span>商品説明と価格の見せ方を、AIと下書きします。</span></li><li><b>4週目</b><span>ショップを作る作業まで頼むかを決めます（頼む場合は別見積）。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>サービスの比較表</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>商品ページの下書き</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>立ち上げまでに決めることの一覧</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>施設トマトの農園で、ネットショップの立ち上げと操作マニュアルづくりを有償でお手伝いしています（進行中）。商品の組み合わせ、送料込みの価格の見せ方、公開設定の手順を一緒に決めました。販売の結果はこれからです。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>ショップの構築作業と操作マニュアルの制作は、月額の伴走には含みません。対応できる場合に限り別途お見積もりします。売上は保証しません。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：ネット直販の立ち上げ（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="shohin" data-panel="shohin" aria-labelledby="shohin-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-search"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-research">調査・選定まで</span><span class="ym-panel-chip">加工品・商品開発の下調べ</span></p>
+              <h3 id="shohin-title">「加工品を作りたいが、何から調べればいいか分からない。」</h3>
+              <p class="ym-panel-lead">調べることと、選ぶ基準を整理するところまでをお手伝いします。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>作りたいものと、予算・場所・人手の条件を伺います。</span></li><li><b>2週目</b><span>必要な許可・設備・費用の調べ方を整理します（確認先は保健所など）。</span></li><li><b>3週目</b><span>設備や外注先の候補を、同じ項目で比較表にします。</span></li><li><b>4週目</b><span>次に誰へ何を相談するかを決めます。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>調査メモ</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>候補の比較表</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>相談先と質問のリスト</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>当社が商品開発そのものを手がけた実績はありません。取材では、設備を分けて検討して初期投資を見直した例や、道具の選び方をAIと相談した例を見てきました。お手伝いできるのは、調査と選定の整理までです。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>レシピ・配合、衛生管理、食品表示の判断は扱いません。AIが出す数値は参考で、専門の窓口での確認が必要です。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：加工品・商品開発の下調べ（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="manual" data-panel="manual" aria-labelledby="manual-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-doc"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-done">伴走で実施</span><span class="ym-panel-chip">作業マニュアル</span></p>
+              <h3 id="manual-title">「作業の説明が、毎回口頭になる。」</h3>
+              <p class="ym-panel-lead">動画や写真から、初めての人が読める手順書を作ります。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>人に渡したい作業を1つ選び、動画か写真で撮ります。</span></li><li><b>2週目</b><span>AIで手順書の下書きを作ります。</span></li><li><b>3週目</b><span>家族やスタッフに読んでもらい、分かりにくい所を直します。</span></li><li><b>4週目</b><span>2本目をご自身で作れるよう、撮り方と頼み方を手順に残します。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>作業マニュアル 1本</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>撮り方と頼み方の手順</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>数値・安全事項の確認リスト</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>過去の伴走では、ハウスでの散布作業を5分ほどの動画に撮り、AIで初めての人向けの手順書にしました。希釈倍率などの数値はAIに断定させず、「農園の人に確認する」と書く形にしています。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>数値や安全に関わる内容は、必ずご自身で確かめていただきます。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：作業マニュアル（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="voice" data-panel="voice" aria-labelledby="voice-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-mic"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-done">伴走で実施</span><span class="ym-panel-chip">声で残す作業記録</span></p>
+              <h3 id="voice-title">「作業記録が続かない。書く時間がない。」</h3>
+              <p class="ym-panel-lead">ChatGPTへの音声入力で、話すだけで記録が残る流れを作ります。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>何を残したいか（日付・場所・作業・気づき）を決めます。</span></li><li><b>2週目</b><span>声で話し、AIに項目ごとに整えさせます。</span></li><li><b>3週目</b><span>1週間続けて、抜ける項目と手間のかかる所を直します。</span></li><li><b>4週目</b><span>記録をためる表と、見返すタイミングを決めます。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>話し始めのひな型</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>記録を整える依頼文</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>記録をためる表</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>過去の伴走では、作業の合間にChatGPTへ声で話し、その内容を作業の記録として残す形を試しました。書く手間を減らし、あとから見返せる記録にすることがねらいです。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>人の名前など個人情報は話さない、という決めごとを最初に作ります。聞き取りの誤りがあるため、数字は見直します。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：声で残す作業記録（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="temp" data-panel="temp" aria-labelledby="temp-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-thermo"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-done">伴走で実施</span><span class="ym-panel-chip">温湿度・積算温度</span></p>
+              <h3 id="temp-title">「ハウスの温度を、勘でしか見ていない。」</h3>
+              <p class="ym-panel-lead">市販のセンサーの記録を表にため、毎日確かめる形を作ります。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>見たい数字と置き場所を決め、機器を選ぶ観点を整理します。</span></li><li><b>2週目</b><span>記録が表に入る設定を、画面共有で一緒に進めます。</span></li><li><b>3週目</b><span>記録が止まる・同じ値が続く、といった不具合を確かめます。</span></li><li><b>4週目</b><span>毎日の見方と、異常に気づくための決まりを作ります。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>記録が自動でたまる表</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>積算温度の確認表</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>記録が止まったときの確かめ方</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>過去の伴走では、市販の温湿度センサーと表計算ソフトで15分ごとの記録を残し、積算温度を毎日確かめる形を作りました。打ち合わせから記録が始まるまでは約2週間でした。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>機器と通信の費用は含みません。機器の購入・設置・保守はご自身で行っていただきます。AIが温度を測ったり、ハウスを制御したりするものではありません。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：温湿度・積算温度（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="leaf" data-panel="leaf" aria-labelledby="leaf-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-leaf"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-done">伴走で実施</span><span class="ym-panel-chip">葉の不調の切り分け</span></p>
+              <h3 id="leaf-title">「葉の色がおかしい。まず何を確かめればいい？」</h3>
+              <p class="ym-panel-lead">写真と状況をAIに渡し、原因の候補と、指導員に聞くことを整理します。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>状況を書く項目（品種・発見日・場所・直近の作業）をそろえます。</span></li><li><b>2週目</b><span>実際の写真で試し、候補の出方を確かめます。</span></li><li><b>3週目</b><span>複数のAIで見比べ、指導員に相談するメモにまとめます。</span></li><li><b>4週目</b><span>家族やスタッフが写真を送る流れを決めます。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>診断の依頼文</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>状況メモの型</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>指導員に渡す相談メモの型</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>過去の伴走では、葉の写真と状況（品種・発見日・場所・直近の作業）をAIに渡し、原因の候補・最初に確かめること・指導員への相談メモを出す依頼文を作りました。同じ問いを3つのAIに投げて見比べる使い方もしています。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>AIの答えは候補で、診断ではありません。農薬の使用判断は扱いません（登録情報・ラベルの表示と、指導機関の助言に従ってください）。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：葉の不調の切り分け（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="keiei" data-panel="keiei" aria-labelledby="keiei-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-chart"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-done">伴走で実施</span><span class="ym-panel-chip">経営の数字・投資判断</span></p>
+              <h3 id="keiei-title">「数字はあるのに、判断に使えていない。」</h3>
+              <p class="ym-panel-lead">農園の情報をフォルダにまとめ、それを読んで答えるAIエージェントを作ります。</p>
+            </div>
+          </header><dl class="ym-parts"><div><dt>フォルダ</dt><dd>経営管理の資料、方針、作業の暦を整理して置きます。AIは毎回ここを読んで答えます。</dd></div><div><dt>メモリー</dt><dd>農園の前提や、一度決めたことを覚えさせます。同じ説明を繰り返さずに済みます。</dd></div><div><dt>スキル</dt><dd>月次の振り返りや原価の見直しなど、よく頼む仕事の手順を登録します。</dd></div></dl>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>判断したいことを1つ決め、必要な資料をフォルダに集めます。</span></li><li><b>2週目</b><span>農園プロフィールと前提を、メモリーに覚えさせます。</span></li><li><b>3週目</b><span>実際の数字で壁打ちし、答えの根拠を確かめます。</span></li><li><b>4週目</b><span>繰り返す仕事をスキルにして、月ごとの使い方を決めます。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>整理したフォルダ</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>農園プロフィール（メモリー）</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>スキル 1〜2本</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>過去の伴走では、稲作の農業法人で、会計データと作業日報から品種別の原価を見える形にし、機械の台数などの投資をAIと検討しました。数字を出すだけで止まらないよう、「何を判断したいか」を言葉にするところから始めています。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>機能の名前は、使うAIによって違います。顧客名簿や従業員の個人情報は入れません。融資・投資の最終判断は、ご自身で行っていただきます。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：経営の数字・投資判断（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="office" data-panel="office" aria-labelledby="office-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-own">当社で実践</span><span class="ym-panel-chip">録音の文字起こしと整理</span></p>
+              <h3 id="office-title">「打ち合わせや電話の内容が、あとに残らない。」</h3>
+              <p class="ym-panel-lead">録音を文字に起こし、決まったこと・次にやることに整理するまでを仕組みにします。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>残したい場面（商談・打ち合わせ・作業の振り返り）と、録音の断り方を決めます。</span></li><li><b>2週目</b><span>録音 → 文字起こし → 整理を、1件やってみます。</span></li><li><b>3週目</b><span>誤変換や固有名詞の直し方を決め、整理の型を整えます。</span></li><li><b>4週目</b><span>整理した結果を、返信・見積・日報など次の仕事につなげます。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>整理の依頼文</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>整理メモの型</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>録音するときの決めごと</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>当社が毎日やっている方法です。取材や打ち合わせを録音して文字に起こし、AIで「決まったこと」「次にやること」「確かめが要ること」に分けています。記事や報告は、その整理から書き始めます。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>録音は相手の了承を得て行います。文字起こしには誤りが入るため、数字と固有名詞は見直します。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：録音の文字起こしと整理（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="keihi" data-panel="keihi" aria-labelledby="keihi-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-coin"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-own">当社で実践</span><span class="ym-panel-chip">確定申告の準備</span></p>
+              <h3 id="keihi-title">「確定申告の前に、毎年あわてる。」</h3>
+              <p class="ym-panel-lead">年内にやることを抜き出し、領収書と記録の整理を進めます。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>青色・白色、農機の購入予定などから、必要な作業を抜き出します。</span></li><li><b>2週目</b><span>領収書や記録から、仕訳の候補をAIに出させます。</span></li><li><b>3週目</b><span>迷う項目を、税理士などへの質問リストにまとめます。</span></li><li><b>4週目</b><span>来年に向けて、月ごとの整理の手順を決めます。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>自分用の年内作業リスト</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>仕訳の候補を出す依頼文</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>税理士への質問リスト</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>当社のメディア「農業AI通信」で、年内の作業リスト、勘定科目25種の早見表、家事按分の計算シート、場面別のAI依頼文24本をまとめた判定キットを無料で配布しています。伴走では、これを農園の状況に当てはめます。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>税務の相談と申告書の作成は扱いません。判断が要る項目は、税理士や税務署にご確認ください。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：確定申告の準備（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="koyo" data-panel="koyo" aria-labelledby="koyo-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-people"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-done">伴走で実施</span><span class="ym-panel-chip">人に任せる準備</span></p>
+              <h3 id="koyo-title">「人を入れたいが、書類も段取りも後回し。」</h3>
+              <p class="ym-panel-lead">書類のたたき台と、作業の改善案を、動ける状態まで用意します。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>任せたい仕事と、今の指示の出し方を伺います。</span></li><li><b>2週目</b><span>書類のたたき台をAIと作ります。</span></li><li><b>3週目</b><span>作業の困りごとを1つ選び、改善案を出して試します。</span></li><li><b>4週目</b><span>専門家に確かめる点を一覧にします。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>書類のたたき台</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>作業の改善案と試した結果</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>専門家に確かめる点の一覧</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>過去の伴走では、雇用契約書のひな型をAIと作り、日々の作業の困りごとについて改善案を出させました。採用はこれからの段階で、「必要になったらすぐ動ける状態」を作ることを目的にしています。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>雇用に関する最終判断と手続きは扱いません。書類は、社会保険労務士などの確認を受けてからお使いください。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：人に任せる準備（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="anzen" data-panel="anzen" aria-labelledby="anzen-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-shield"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-done">伴走で実施</span><span class="ym-panel-chip">AIの選び方・安全な設定</span></p>
+              <h3 id="anzen-title">「どのAIを使えばいい？ 入れた情報は大丈夫？」</h3>
+              <p class="ym-panel-lead">用途ごとの使い分けと、入れない情報の決めごとを最初に作ります。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>今の使い方と不安を伺い、設定を画面共有で確かめます。</span></li><li><b>2週目</b><span>用途ごとに試し、合うものを選びます。</span></li><li><b>3週目</b><span>入れない情報の決めごとを作ります。</span></li><li><b>4週目</b><span>家族やスタッフに共有する形にまとめます。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>用途ごとの使い分け表</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>入れない情報のリスト</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>設定の確認手順</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>過去の伴走では、文章づくりと栽培の相談でAIを使い分け、大事な相談は複数のAIで見比べる形に落ち着きました。入力した情報の扱いの設定を途中で見直した経験から、いまは最初に設定と決めごとを作ります。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>IDやパスワードはお預かりしません。どのAIを使うかは、ご自身で決めていただきます。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：AIの選び方・安全な設定（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="shikyo" data-panel="shikyo" aria-labelledby="shikyo-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-trend"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-built">作って提供・別見積</span><span class="ym-panel-chip">市況・価格の自動収集</span></p>
+              <h3 id="shikyo-title">「市場の価格を、毎日サイトまで見に行っている。」</h3>
+              <p class="ym-panel-lead">公開されている市況から、見たい品目の価格を表にためる仕組みです。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>進め方の例</h4><ol class="ym-weeks"><li><b>手順1</b><span>見たい市場・品目・産地を伺います。</span></li><li><b>手順2</b><span>公開情報の形式と、利用の条件を確かめます。</span></li><li><b>手順3</b><span>試作し、読み取った価格を元の資料と照らし合わせます。</span></li><li><b>手順4</b><span>引き渡しと、止まったときの確かめ方をお伝えします。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>価格がたまる表</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>仕組みの説明書</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>読み取り結果の確かめ方</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>ねぎ農家さん向けに、市場が公開している市況のPDFから特定の品目・産地の価格をAIで読み取り、表計算ソフトに1日1行ずつ追記する仕組みを作って提供しました。同じ日を二重に記録しない確認も入れています。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>個別の仕組みづくりは、月額の伴走には含みません。対応できる場合に限り別途お見積もりします。AIの読み取りには誤りがあり、公開元の形式が変わると止まります。保守は含みません。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：市況・価格の自動収集（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+        <article class="ym-panel" id="jisaku" data-panel="jisaku" aria-labelledby="jisaku-title">
+          <header class="ym-panel-head">
+            <span class="ym-panel-icon" aria-hidden="true"><svg class="icon"><use href="#i-gear"/></svg></span>
+            <div>
+              <p class="ym-panel-meta"><span class="ym-badge ym-badge-research">調査・選定まで</span><span class="ym-panel-chip">道具を自作する前の整理</span></p>
+              <h3 id="jisaku-title">「こういう道具があれば、を形にしたい。」</h3>
+              <p class="ym-panel-lead">何を作るかの整理と、方法を選ぶところまでをお手伝いします。</p>
+            </div>
+          </header>
+          <div class="ym-panel-body">
+            <section class="ym-block ym-block-steps"><h4>1か月の進め方（想定例）</h4><ol class="ym-weeks"><li><b>1週目</b><span>困りごとを1つに絞り、「誰が・いつ・何を見たいか」を書き出します。</span></li><li><b>2週目</b><span>既製品や既存のサービスで足りるかを調べます。</span></li><li><b>3週目</b><span>自作する場合の方法を、費用と手間で比べます。</span></li><li><b>4週目</b><span>最初の一歩と、相談先を決めます。</span></li></ol></section>
+            <div class="ym-side">
+              <section class="ym-block ym-block-left"><h4>手元に残るもの</h4><ul class="ym-left"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>要件メモ</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>方法の比較表</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>進め方の案</li></ul></section>
+              <section class="ym-block ym-block-fact"><h4>元になった事実</h4><p>農家さんの道具づくりを、当社が伴走で実際に進めた実績はありません。取材では、ハウスの温度をいつものチャットで見られるようにした例などを見てきました。お手伝いできるのは、調査と選定までです。</p></section>
+            </div>
+          </div>
+          <p class="ym-note"><b>扱わないこと・ご注意</b>開発、機器の設置、保守は含みません。作る作業まで希望される場合は、対応できるかを含めて別途ご相談ください。</p>
+          <div class="ym-panel-actions">
+            <a class="button" href="index.html#consultation">この内容で相談する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="ym-copy" type="button" data-copy="相談したいこと：道具を自作する前の整理（「あなたの場合の1か月」を見て）" hidden>相談フォームに書く一文をコピー</button>
+          </div>
+        </article>
+      </div>
+      <p class="section-footnote">過去の伴走で実際に行ったことの紹介で、今回の有料サービスの利用実績ではありません。到達点は農園ごとに異なり、成果を保証するものではありません。</p>
+    </div>
+  </section>
+
+  <section class="section process-section" id="month" aria-labelledby="month-title">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow"><span class="eyebrow-no">02</span>ONE MONTH</p>
+        <h2 id="month-title"><span class="nw">どの困りごとでも、</span><br><span class="nw">1か月の形は同じです。</span></h2>
+        <p>オンラインの定例が月2回（各60分程度）。その間のご相談はチャットで受け、営業日にお返事します。</p>
+      </div>
+      <ol class="steps">
+        <li><span class="step-no">01</span><h3>1週目<br>農園の話を聞く</h3><p>1回目の定例。品目・規模・作業の暦と、いちばん困っていることを伺い、1か月で試すことを1つ決めます。</p></li>
+        <li><span class="step-no">02</span><h3>2週目<br>仕事の中で試す</h3><p>決めたことを、実際の仕事でやってみます。つまずいた所はチャットでお知らせください。</p></li>
+        <li><span class="step-no">03</span><h3>3週目<br>一緒に直す</h3><p>2回目の定例。使えたこと・使いにくかったことを確かめ、その場で直します。</p></li>
+        <li><span class="step-no">04</span><h3>4週目<br>振り返って、残す</h3><p>作った資料と設定をお渡しします。続けるかどうかは、ここで一緒に決めます。自動更新はありません。</p></li>
+      </ol>
+      <p class="program-note">月5万円（税別・税込55,000円）／1か月単位の契約です。生成AIの利用料は、ご本人のご契約・ご負担です。</p>
+    </div>
+  </section>
+
+  <section class="section terms-section" id="scope" aria-labelledby="scope-title">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow"><span class="eyebrow-no">03</span>HOW TO READ</p>
+        <h2 id="scope-title"><span class="nw">できることと、</span><span class="nw">できないことを分けて書きます。</span></h2>
+      </div>
+      <div class="terms-grid">
+        <article class="terms-card">
+          <h3>4つの表示の意味。</h3>
+          <dl class="ym-legend"><div><dt><span class="ym-badge ym-badge-done">伴走で実施</span></dt><dd>過去の個別伴走で、農家さんと一緒に実際にやったこと</dd></div><div><dt><span class="ym-badge ym-badge-own">当社で実践</span></dt><dd>株式会社農情人が、自社の仕事で続けていること</dd></div><div><dt><span class="ym-badge ym-badge-built">作って提供・別見積</span></dt><dd>個別に作って農家さんへ提供したこと。月額の伴走には含みません</dd></div><div><dt><span class="ym-badge ym-badge-research">調査・選定まで</span></dt><dd>当社に実施の実績はなく、調べる・選ぶところまでをお手伝いすること</dd></div></dl>
+        </article>
+        <article class="terms-card terms-card-out">
+          <h3>月額の伴走に含まないもの。</h3>
+          <ul>
+            <li>税務の相談・申告書の作成</li>
+            <li>農薬の使用判断</li>
+            <li>融資・投資・雇用の最終判断や手続きの代行</li>
+            <li>個別のシステム開発、機器の購入・設置・保守</li>
+            <li>日々の記帳・データ入力や、販売・発信の継続的な代行</li>
+            <li>売上やコスト削減などの成果保証</li>
+          </ul>
+          <p>AIの答えは判断の材料です。最終的な判断は農家さまご自身が行います。範囲外のご依頼は、対応できる場合に限り別途お見積もりし、合意後に着手します。<a class="inline-link" href="terms.html#scope">支援範囲と販売規約を見る</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ym-cta" id="next" aria-labelledby="next-title">
+    <div class="container ym-cta-inner">
+      <p class="eyebrow">LET’S TAKE THE FIRST STEP</p>
+      <h2 id="next-title"><span class="nw">近いものが見つかったら、</span><br><span class="nw">そのまま教えてください。</span></h2>
+      <p>相談フォームの「今、困っていること」に、選んだ困りごとを一言書くだけで大丈夫です。<br>見つからなかった場合も、今の状況をそのままお聞かせください。</p>
+      <div class="hero-actions">
+        <a class="button" href="index.html#consultation">相談内容を登録する<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="button-ghost" href="index.html#price">料金と条件を見る<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <p class="ym-cta-note">同時にお受けするのは3農園までです。登録時点では契約になりません。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-main">
+    <a class="brand official-brand" href="index.html"><img src="assets/metagri-logo-horizontal.jpg" width="1437" height="382" alt="Metagri研究所"><span class="brand-sub">農家のAI右腕づくり支援</span></a>
+    <p>運営・契約主体：株式会社農情人</p>
+    <a href="#top" class="back-top">ページの先頭へ<svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a>
+  </div>
+  <div class="container footer-legal"><a href="index.html">サービスの概要</a><a href="terms.html">販売規約</a><a href="https://noujoujin.com/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a></div>
+  <div class="container footer-bottom"><span>農家に、AIの右腕を。</span><small>© 2026 株式会社農情人</small></div>
+</footer>
+
+<script src="your-month.js"></script>
+</body>
+</html>

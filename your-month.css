@@ -1,0 +1,163 @@
+/* =========================================================
+   「あなたの場合の1か月」ページ専用（your-month.html）
+   - 色・書体・角丸は style.css の変数をそのまま使う
+   - style.css は変更しない。このファイルだけで追加分を完結させる
+   ========================================================= */
+
+/* ---------- ヒーロー ---------- */
+.ym-hero{background:linear-gradient(180deg,var(--green-soft) 0%,#fff 100%);padding:88px 0 72px;border-bottom:1px solid var(--line)}
+.ym-hero-inner{max-width:880px}
+.ym-hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.2vw,54px);line-height:1.45;letter-spacing:.01em;color:var(--forest);margin:4px 0 26px}
+.ym-hero h1 .mark{background:linear-gradient(transparent 68%,#DCEBCB 68%,#DCEBCB 92%,transparent 92%);padding-right:.05em}
+.ym-hero-lead{font-size:19px;font-weight:700;line-height:1.85;letter-spacing:.04em;margin-bottom:12px;font-feature-settings:"palt"}
+.ym-hero-text{font-size:15px;color:var(--muted);line-height:2;margin-bottom:32px;word-break:auto-phrase}
+
+/* ---------- 選ぶ ---------- */
+.ym-choose{background:#fff}
+.ym-tabs{display:none}
+.js .ym-tabs{display:flex;justify-content:center;gap:6px;width:fit-content;margin:0 auto 32px;padding:6px;background:var(--green-soft);border:1px solid var(--line-green);border-radius:999px}
+.ym-tab{min-height:48px;padding:0 26px;border:0;border-radius:999px;background:transparent;color:var(--green-dark);font-size:15px;font-weight:700;letter-spacing:.06em;cursor:pointer;transition:background .2s,color .2s}
+.ym-tab:hover{background:#fff}
+.ym-tab.is-active{background:var(--green-dark);color:#fff;box-shadow:0 8px 18px -10px rgba(44,107,47,.7)}
+.ym-pane{margin-bottom:40px}
+.js .ym-pane[hidden]{display:none}
+.ym-pane-title{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--forest);margin-bottom:16px}
+.js .ym-pane-title{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ym-pane-note{font-size:14px;color:var(--muted);text-align:center;margin-bottom:24px}
+
+.ym-chip-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ym-chip-group{padding:22px 20px 20px;background:var(--warm);border:1px solid #EEECDF;border-radius:var(--radius)}
+.ym-chip-group .mini-label{margin-bottom:12px}
+.ym-chip-group ul{display:grid;gap:8px}
+.ym-chip{display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 14px;background:#fff;border:1px solid var(--line);border-radius:10px;font-size:14px;font-weight:700;line-height:1.5;color:var(--ink);transition:border-color .2s,background .2s,color .2s,box-shadow .2s}
+.ym-chip span{word-break:auto-phrase}
+.ym-chip .icon{width:20px;height:20px;color:var(--green-dark)}
+.ym-chip:hover{border-color:var(--green);box-shadow:var(--shadow)}
+.ym-chip.is-active{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
+.ym-chip.is-active .icon{color:#fff}
+.ym-chip-sm{min-height:36px;padding:4px 12px;font-size:13px;border-radius:999px}
+
+.ym-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ym-case{padding:26px 24px 24px;background:var(--warm);border:1px solid #EEECDF;border-radius:var(--radius)}
+.ym-case-kind{display:inline-block;margin-bottom:10px;padding:2px 10px;border-radius:999px;background:var(--forest);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;line-height:1.7}
+.ym-case h3{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--forest)}
+.ym-case-sub{font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:.04em;margin-bottom:10px}
+.ym-case-text{font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:16px}
+.ym-case .mini-label{margin-bottom:8px}
+.ym-case-links{display:flex;flex-wrap:wrap;gap:6px}
+
+/* ---------- 選んだ内容（パネル） ---------- */
+.ym-panels{scroll-margin-top:calc(var(--header-h) + 16px)}
+.ym-panels-label{display:none}
+.js .ym-panels-label{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--green-dark)}
+.ym-panel{margin-bottom:28px;padding:40px 44px 36px;background:#fff;border:1px solid var(--line-green);border-radius:20px;box-shadow:var(--shadow-lg);scroll-margin-top:calc(var(--header-h) + 16px)}
+.js .ym-panel{display:none;margin-bottom:0}
+.js .ym-panel.is-active{display:block}
+.ym-panel-head{display:grid;grid-template-columns:64px 1fr;gap:22px;align-items:start;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.ym-panel-icon{display:grid;place-items:center;width:64px;height:64px;border-radius:18px;background:var(--green-pale);color:var(--green-dark)}
+.ym-panel-icon .icon{width:32px;height:32px}
+.ym-panel-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px}
+.ym-panel-chip{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--green-dark)}
+.ym-panel h3{font-family:var(--serif);font-weight:600;font-size:clamp(22px,2.4vw,30px);line-height:1.55;color:var(--forest)}
+.ym-panel-lead{margin-top:8px;font-size:16px;font-weight:700;line-height:1.85}
+
+.ym-badge{display:inline-block;padding:3px 11px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.05em;line-height:1.6;white-space:nowrap}
+.ym-badge-done{background:var(--forest);color:#fff}
+.ym-badge-own{background:var(--green-pale);color:var(--green-dark);border:1px solid var(--line-green)}
+.ym-badge-built{background:#FCEBDD;color:#9A4A12}
+.ym-badge-research{background:#fff;color:var(--muted);border:1px dashed var(--faint)}
+
+.ym-parts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.ym-parts div{padding:18px 20px;background:var(--green-soft);border:1px solid #DCE9D4;border-radius:var(--radius)}
+.ym-parts dt{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--forest);margin-bottom:4px}
+.ym-parts dd{font-size:13px;color:var(--muted);line-height:1.85}
+
+.ym-panel-body{display:grid;grid-template-columns:1.15fr 1fr;gap:36px;margin-top:28px}
+.ym-block h4{margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--green-dark)}
+.ym-weeks{display:grid;gap:0;counter-reset:none}
+.ym-weeks li{position:relative;display:grid;grid-template-columns:64px 1fr;gap:16px;padding:0 0 18px}
+.ym-weeks li::before{content:"";position:absolute;left:31px;top:30px;bottom:0;width:1px;background:repeating-linear-gradient(180deg,var(--line-green) 0 5px,transparent 5px 10px)}
+.ym-weeks li:last-child{padding-bottom:0}
+.ym-weeks li:last-child::before{display:none}
+.ym-weeks b{position:relative;display:grid;place-items:center;height:30px;border-radius:999px;background:#fff;border:1px solid var(--line-green);font-size:12px;font-weight:700;color:var(--green-dark);letter-spacing:.04em}
+.ym-weeks li:last-child b{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
+.ym-weeks span{font-size:15px;line-height:1.85;padding-top:1px}
+.ym-side{display:grid;gap:22px;align-content:start}
+.ym-block-left{padding:22px 24px;background:var(--warm);border:1px solid #EEECDF;border-radius:var(--radius)}
+.ym-left{display:grid;gap:10px}
+.ym-left li{display:flex;align-items:flex-start;gap:10px;font-size:15px;font-weight:700;line-height:1.7}
+.ym-left .icon{width:22px;height:22px;padding:4px;margin-top:2px;border-radius:50%;background:var(--green-pale);color:var(--green-dark)}
+.ym-block-fact p{font-size:14px;color:var(--muted);line-height:1.95}
+.ym-note{margin-top:26px;padding:16px 20px;border:1px dashed var(--line-green);border-radius:var(--radius);font-size:13px;color:var(--muted);line-height:1.9}
+.ym-note b{display:block;font-size:12px;letter-spacing:.06em;color:var(--green-dark);margin-bottom:2px}
+.ym-panel-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:26px}
+.ym-copy{min-height:44px;padding:0 4px;border:0;border-bottom:1px solid var(--line-green);background:transparent;color:var(--green-dark);font-size:14px;font-weight:700;letter-spacing:.04em;cursor:pointer}
+.ym-copy:hover{color:var(--forest);border-color:var(--green)}
+
+/* ---------- 表示の見方 ---------- */
+.ym-legend{display:grid;gap:14px}
+.ym-legend div{display:grid;grid-template-columns:1fr;gap:6px}
+.ym-legend dt{line-height:1}
+.ym-legend dd{font-size:14px;color:var(--ink);line-height:1.8}
+
+/* ---------- 最後の案内 ---------- */
+.ym-cta{background:var(--forest);color:#fff;padding:96px 0}
+.ym-cta-inner{max-width:820px;text-align:center}
+.ym-cta .eyebrow{justify-content:center;color:#CFE3C4}
+.ym-cta h2{color:#fff;margin-bottom:20px}
+.ym-cta p{font-size:15px;line-height:2;color:rgba(255,255,255,.86);word-break:auto-phrase}
+.ym-cta .hero-actions{justify-content:center;margin-top:32px}
+.ym-cta .button{background:#fff;color:var(--forest);box-shadow:none}
+.ym-cta .button:hover{background:var(--green-pale)}
+.ym-cta .button-ghost{color:#fff}
+.ym-cta .button-ghost:hover{color:#CFE3C4}
+.ym-cta .ym-cta-note{margin-top:20px;font-size:12px;color:rgba(255,255,255,.7)}
+
+.footer-legal a+a{margin-left:20px}
+
+/* ---------- 画面幅ごとの調整 ---------- */
+@media (max-width:1100px){
+  .ym-chip-groups{grid-template-columns:repeat(2,1fr)}
+  .ym-cases{grid-template-columns:repeat(2,1fr)}
+  .ym-page .header-inner nav{gap:20px}
+}
+@media (max-width:900px){
+  .ym-panel-body{grid-template-columns:1fr;gap:28px}
+  .ym-parts{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .ym-hero{padding:48px 0 44px}
+  .ym-hero-lead{font-size:16px}
+  .ym-hero-text{font-size:14px}
+  .ym-hero-text br{display:none}
+  .js .ym-tabs{width:100%;margin-bottom:24px}
+  .ym-tab{flex:1;padding:0 8px;font-size:14px;letter-spacing:.02em}
+  .ym-chip-groups{grid-template-columns:1fr;gap:12px}
+  .ym-chip-group{padding:16px 14px 14px}
+  .ym-chip-group ul{grid-template-columns:1fr 1fr}
+  .ym-chip{padding:8px 10px;gap:8px;font-size:13px}
+  .ym-chip .icon{width:18px;height:18px}
+  .ym-cases{grid-template-columns:1fr;gap:12px}
+  .ym-case{padding:20px 18px}
+  .ym-panel{padding:24px 18px 22px;border-radius:16px}
+  .ym-panel-head{grid-template-columns:48px 1fr;gap:14px;padding-bottom:20px}
+  .ym-panel-icon{width:48px;height:48px;border-radius:14px}
+  .ym-panel-icon .icon{width:26px;height:26px}
+  .ym-panel-lead{font-size:15px}
+  .ym-weeks li{grid-template-columns:56px 1fr;gap:12px}
+  .ym-weeks li::before{left:27px}
+  .ym-weeks span{font-size:14px}
+  .ym-left li{font-size:14px}
+  .ym-block-left{padding:18px 16px}
+  .ym-panel-actions .button{width:100%}
+  .ym-cta{padding:64px 0}
+  .ym-cta p br{display:none}
+  .ym-cta .hero-actions{flex-direction:column}
+  .ym-cta .button{width:100%}
+}
+@media (max-width:360px){
+  .ym-chip-group ul{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .ym-tab,.ym-chip{transition:none}
+}
